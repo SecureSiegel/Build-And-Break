@@ -2,7 +2,6 @@
 Build applications with C++ and then learn how they work through reverse engineering
 
 
-
 # Why I Created These C++ Course Folders
 
 ## The purpose
@@ -13,12 +12,8 @@ My goal is to help learners understand how to plan a program, write it, test it,
 
 ## What the course folders contain
 
-- [`Year1Projects`](Year1Projects/) contains the original first-year exercises and assignments.
-- [`Year1Projects-Ready`](Year1Projects-Ready/) contains the organized Year 1 lessons, from first programs and calculations through a student-grade-report project.
-- [`Year2Projects`](Year2Projects/) contains the original second-year examples and assignments.
-- [`Year2Project-Ready`](Year2Project-Ready/) contains the organized Year 2 lessons, moving from functions, arrays, and pointers into classes, object lifetimes, linked lists, and event-driven programs.
+- [`Year1Projects`](Year1Projects/) contains the organized Year 1 lessons, from first programs and calculations through a student-grade-report project, moving from functions, arrays, and pointers into classes, object lifetimes, linked lists, and event-driven programs.
 
-The two `Ready` folders are the teaching path. The original project folders are references we can revisit to see where each topic came from and how programming approaches have changed. Some original examples use older or compiler-specific C++. I will teach the concepts with modern, standard C++ where appropriate and point out when a historical example needs a safer or more portable approach.
 
 ## How we will learn
 
