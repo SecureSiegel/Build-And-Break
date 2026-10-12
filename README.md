@@ -1,46 +1,47 @@
-# Build-And-Break
-Build applications with C++ and then learn how they work through reverse engineering
+# Year 1 C++: Learn It, Build It, Use It
 
+Welcome! I put this course together from the programming work in `Year1Projects`. We will begin with small programs, learn one idea at a time, and then combine those ideas in a student-grade report project.
 
-# Why I Created These C++ Course Folders
+This course is for learners of different ages who are new to programming. No previous coding experience is needed. I want everyone to ask questions, test ideas, learn from mistakes, and be proud of steady progress.
 
-## The purpose
+## How to use these lessons
 
-I created these folders to turn my Year 1 and Year 2 C++ coursework into a clear path for learning how to code with C++. The original projects give us examples and history; the `Ready` folders turn those ideas into lessons we can follow, practice, and build on.
+Work through the lessons in order. For each lesson:
 
-My goal is to help learners understand how to plan a program, write it, test it, improve it, and explain how it works. We will build confidence one small idea at a time. Mistakes are part of learning, and we will use them to get better.
+1. Read the goal together and talk about what the program should do.
+2. Follow the guided steps. Type and run the code in small pieces instead of copying a whole program without understanding it.
+3. Try the practice tasks independently, then compare approaches.
+4. Use the check-for-understanding questions to decide whether we are ready to move on.
 
-## What the course folders contain
+Each lesson has a suggested source-project connection. Those folders and files are in the sibling `Year1Projects` folder. The original work is useful historical course material, but it was written for an older C++ environment. I will teach modern, standard C++ in our new programs.
 
-- [`Year1Projects`](Year1Projects/) contains the organized Year 1 lessons, from first programs and calculations through a student-grade-report project, moving from functions, arrays, and pointers into classes, object lifetimes, linked lists, and event-driven programs.
+## Course sequence
 
+| Lesson | What we will learn | Source-project connection |
+|---|---|---|
+| [01 - How a C++ Program Works](Lesson-01-How-a-Program-Works.md) | Program structure, output, comments, and a first run | `Jan12`, `Jan17` |
+| [02 - Variables, Input, and Calculations](Lesson-02-Variables-Input-and-Calculations.md) | Types, keyboard input, arithmetic, and checking formulas | `Jan17`, `Jan19`, `ASSIGNMENT 1` |
+| [03 - Text and Clear Output](Lesson-03-Text-and-Clear-Output.md) | Strings, combining text, and readable numeric output | `Jan24`, `Jan26`, `ASSIGNMENT 1` |
+| [04 - Making Decisions](Lesson-04-Making-Decisions.md) | Comparisons, `if`/`else`, multi-way choices, and grade rules | `Feb9`, `Feb14`, `Feb16` |
+| [05 - Repeating Work with Loops](Lesson-05-Repeating-Work-with-Loops.md) | `while` and `for` loops, counters, sentinels, and safe exits | `Feb14`, `Feb21`, `Mar16` |
+| [06 - Reusable Functions](Lesson-06-Reusable-Functions.md) | Prototypes, parameters, return values, and references | `Mar14`, `Mar16`, `Mar21` |
+| [07 - Reading and Writing Text Files](Lesson-07-Reading-and-Writing-Text-Files.md) | File streams, record formats, error checks, and output files | `Feb2`, `Feb16`, `Apr4` |
+| [08 - Collections with Arrays](Lesson-08-Collections-with-Arrays.md) | One- and two-dimensional arrays, indexing, and nested loops | `Mar23`, `Mar28`, `Apr4` |
+| [09 - Building a Grade Report in Stages](Lesson-09-Building-a-Grade-Report-in-Stages.md) | Input validation and combining files, arrays, functions, and calculations | `Program Assignment 1-4`, `Apr4` |
+| [10 - Structs and the Grade-Report Capstone](Lesson-10-Structs-and-the-Grade-Report-Capstone.md) | Grouping student data, processing records, and producing a report | `Program Assignment 5`, `Apr6` |
+| [11 - Strings, Review, and Portfolio](Lesson-11-Strings-Review-and-Portfolio.md) | Text records, debugging, review, and presenting finished work | `FINALS`, `Screenshots`, `PORTFOLIO.TXT` |
 
-## How we will learn
+The original course included repeated practice, quizzes, assignments, a midterm, and a final. I have kept that rhythm: use the practice tasks and checks as low-pressure reviews, and treat Lessons 9-11 as opportunities to bring earlier skills together.
 
-In each lesson, I will explain the goal, model the new idea, and guide learners through building and testing a program. Then learners will try practice tasks and explain their reasoning. By the end of Year 1, we will combine fundamentals into complete small programs. In Year 2, we will organize related information and behavior into objects and explore how larger applications are structured.
+## A note about the original code
 
-I want learners to leave with more than code that happens to run. I want them to be able to describe the problem, make a plan, choose a design, test it with evidence, and explain their decisions to someone else.
+Many source programs use `void main()`, `<conio>`, `getch()`, or `clrscr()`. These belong to old compiler-specific environments and are not portable standard C++. In this course, I will use `int main()`, standard headers such as `<iostream>` and `<string>`, and ordinary console input/output. I will also show learners how to recognize a bug, test a small example, and correct it rather than treating every old line as a rule to copy.
 
-## From C++ source code to the machine layer
+## Materials and teaching approach
 
-Learning how a program works does not have to stop at the C++ source. Once we understand how to write and build a small program, I will also introduce the idea of examining what the compiler produced. This is called **reverse engineering**: studying a program or its compiled output to understand its structure and behavior.
+- A C++ compiler or beginner-friendly IDE that supports standard C++.
+- A text editor and a place to save lesson programs.
+- Paper or a whiteboard for sketching the input, steps, and expected output before coding.
+- Patience and a willingness to try again. Errors are information we can use.
 
-With an application we wrote and compiled ourselves, we can use tools such as **Ghidra** to explore the compiled program. We can compare a small C++ function with its disassembly, look at how functions call one another, and observe how source-level ideas are represented as lower-level instructions. We will treat the decompiler's output as an interpretation to investigate, not as a perfect copy of the original source.
-
-This will be a learning activity using our own programs or other software we have clear permission to examine. We will not use these techniques to bypass protections, access data without permission, or interfere with someone else's software or systems.
-
-### How this connects to “How a Program Works”
-
-Our first program will give us a starting point for this larger picture:
-
-1. We write a simple C++ program and explain its instructions.
-2. We compile and run it, observing its input, processing, and output.
-3. We inspect the compiled version of that same program with an appropriate tool.
-4. We compare what we can see at the C++ level with what we can observe at the machine-instruction level.
-5. We discuss what stayed recognizable, what the compiler changed, and why the lower-level view is more detailed and less like the source we wrote.
-
-We will keep the first exploration small and guided. The purpose is to connect the ideas we are learning—not to expect beginners to understand every assembly instruction or every feature of a professional reverse-engineering tool at once.
-
-## The bigger goal
-
-I want this course to help learners become curious, capable problem-solvers. We will learn how to create programs, how to reason about their behavior, and how to look beneath the surface when we want to understand more. Step by step, we will connect the code we write to the applications we use and, eventually, to the instructions a computer carries out.
+I will keep examples small, invite learners to predict what they will do, and encourage them to explain their choices in their own words. The goal is not just to make a program run; it is to understand how to make a clear plan and turn it into working code.
